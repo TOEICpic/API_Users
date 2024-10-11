@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ส่วนที่ไม่แสดงออกไปในหน้าจอของ Browser -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document 2</title>
+  <link rel="stylesheet" href="/web/css/styles.css">
+</head>
+<body>
+    <div class="button-go-to-page">
+        <div class="flexes">
+            <div class="go-page1"><a href="index.html"><button class="button-user">Customer</button></a></div>
+            <div class="go-page3"><a href="order_mng.html"><button class="button-user">Order</button></a></div>
+            <div class="go-page2"><a href="product.html"><button class="button-user">Product</button></a></div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="header form-input"> <h1>เพิ่ม</h1> </div>
+    <div class="flex form-input"> <div class="header-form">วันที่ </div><div class="form" id="date_t"></div>
+    </div>
+    <div class="flex form-input"> <div class="header-form" >เวลา </div><div class="form" id="time_d"></div>
+    </div>
+    <div class="flex form-input"> <div class="header-form">จำนวนทั้งหมด</div>
+      <input class="form" name="total" type="number" oninput="validateValue.call(this)" maxlength="10" placeholder="Total"> </div> 
+    <div class="flex form-input"> <div class="header-form">รหัสสินค้า </div>
+        <div id="products" class="pro" name="pid"></div> 
+    </div>
+    <div class="flex form-input"> <div class="header-form">รหัสลูกค้า </div>
+        <div id="customers" class="pro" name="cid"></div> 
+    </div>
+      <div id="message" class="message"></div> 
+    <div class="center"> <button onclick="submitData()" class="button">ส่งข้อมูล</button> </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="/web/js/order_mng.js"></script>
+</body>
+</html>
